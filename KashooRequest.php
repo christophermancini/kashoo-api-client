@@ -181,7 +181,9 @@ class KashooRequest {
         } else {
             $headers = array(
                 "Accept: application/json",
+                "Content-Type: application/json",
                 "Authorization: TOKEN uuid:" . self::$_token,
+                "User-Agent: github.com/christophermancini/kashoo-api-client", 
             );
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
             $this->_headers = $headers;
